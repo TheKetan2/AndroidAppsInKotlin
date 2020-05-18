@@ -47,7 +47,9 @@ class MainActivity : AppCompatActivity() {
 
                 val differenceInMinutes = currentDateToMinutes - selectedDateInMin
 
-                tvAgeInMinutes.setText(differenceInMinutes.toString())
+                tvAgeInMinutes.setText(differenceInMinutes.toString()+" Minutes")
+
+                tvAgeInDays.setText((differenceInMinutes/1440).toString()+" Days")
 
             }, year, month, day)
         dpd.datePicker.setMaxDate(Date().time - 86400000)
