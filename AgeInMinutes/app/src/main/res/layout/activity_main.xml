@@ -33,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="20sp"
         android:text="IN MINUTES"
         android:padding="10dp"
         android:textColor="@color/textColor"
@@ -42,13 +42,49 @@
         />
 
     <Button
+        android:id="@+id/btnDatePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:text="SELECT DATE"
         android:textStyle="bold"
         android:textSize="26sp"
+        android:background="#ffffff"
+        android:textColor="#929292"
         />
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#844046"
+        android:layout_marginTop="20sp"
+        android:textSize="35sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#844046"
+        android:layout_marginTop="20sp"
+        android:textSize="20sp"
+        android:text="Selected Date"
+        />
+    <TextView
+        android:id="@+id/tvAgeInMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#844046"
+        android:layout_marginTop="20sp"
+        android:textSize="35sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#844046"
+        android:layout_marginTop="20sp"
+        android:textSize="20sp"
+        android:text="Age in minutes"
+        />
+
 
 
 </LinearLayout>
