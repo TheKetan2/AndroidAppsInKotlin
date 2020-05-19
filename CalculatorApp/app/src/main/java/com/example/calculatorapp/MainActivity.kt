@@ -27,7 +27,50 @@ class MainActivity : AppCompatActivity() {
         lastDot = false
     }
     fun equalClick(view: View) {
+        if(lastNumeric){
+            var tvValue = tvSolution.text.toString()
+            var prefix = ""
 
+            try{
+                if(tvValue.startsWith("-")){
+                    prefix = "-"
+                    tvValue = tvValue.substring(1)
+                }
+                if(tvValue.contains("-")){
+                    val spiltValue = tvSolution.text.split("-")
+                    var one = spiltValue[0]
+                    var two = spiltValue[1]
+                    if(!prefix.isEmpty()){
+                        one = prefix+one
+                    }
+                    tvSolution.text = removeZeroAfterDot((one.toDouble() - two.toDouble()).toString())
+                }else if(tvValue.contains("+")){
+                    val spiltValue = tvSolution.text.split("+")
+                    var one = spiltValue[0]
+                    var two = spiltValue[1]
+                    tvSolution.text = removeZeroAfterDot((one.toDouble() + two.toDouble()).toString())
+                }else if(tvValue.contains("*")){
+                    val spiltValue = tvSolution.text.split("*")
+                    var one = spiltValue[0]
+                    var two = spiltValue[1]
+                    tvSolution.text = removeZeroAfterDot((one.toDouble() * two.toDouble()).toString())
+                }else if(tvValue.contains("/")){
+                    val spiltValue = tvSolution.text.split("/")
+                    var one = spiltValue[0]
+                    var two = spiltValue[1]
+                    tvSolution.text = removeZeroAfterDot((one.toDouble() / two.toDouble()).toString())
+                }
+            }catch(e: ArithmeticException){
+                e.printStackTrace()
+            }
+        }
+    }
+
+    private fun removeZeroAfterDot(result: String): String{
+        var value = result
+        if(result.contains(".0"))
+            value = result.substring(0, result.length-2)
+        return value
     }
 
     fun onOperator(view: View){
