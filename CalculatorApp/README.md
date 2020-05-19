@@ -1,5 +1,4 @@
-## App to calculate Age in minutes
-Its a simple app where user can pick his/her birth date and then get their age in Minutes
-
+## Calculator App in Kotlin
+Simple calculator app to learn Linear Layout and onClickListeners
 
 ![alt text](assets/screen.gif)
