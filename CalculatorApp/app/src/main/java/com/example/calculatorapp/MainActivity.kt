@@ -26,7 +26,25 @@ class MainActivity : AppCompatActivity() {
         lastNumeric = false
         lastDot = false
     }
-    fun equalClick(view: View) {}
+    fun equalClick(view: View) {
+
+    }
+
+    fun onOperator(view: View){
+        if(lastNumeric && !isOperatorAdded(tvSolution.text.toString())){
+            tvSolution.append((view as Button).text)
+            lastNumeric = false
+            lastDot = false
+        }
+    }
+
+    private fun isOperatorAdded(value: String): Boolean{
+        return if(value.startsWith("-")){false}else{
+                    value.contains("/") ||
+                    value.contains("+")||
+                    value.contains("*")||
+                    value.contains("-")}
+    }
 
     fun onDecimalPoint(view: View){
         if(lastNumeric && !lastDot){
