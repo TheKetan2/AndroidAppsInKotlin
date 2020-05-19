@@ -14,13 +14,10 @@
         android:id="@+id/tvSolution"
         android:layout_width="match_parent"
         android:layout_height="250sp"
-        android:layout_gravity="end"
-        android:textAlignment="textEnd"
         android:textColor="@android:color/background_dark"
-        android:paddingTop="180dp"
         android:textSize="50sp"
-        android:text="Hello World!"
         android:background="#00BCD4"
+        android:maxLength="12"
         />
 
     <LinearLayout
@@ -187,7 +184,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
-            android:onClick="digitClick"
+            android:onClick="onDecimalPoint"
             android:textSize="25sp"
             android:text="."
             android:layout_weight="1"
@@ -209,7 +206,7 @@
             android:background="@android:color/transparent"
             android:textSize="25sp"
             android:text="CLR"
-            android:onClick="digitClick"
+            android:onClick="onClear"
             android:layout_weight="1"
             />
         <Button
